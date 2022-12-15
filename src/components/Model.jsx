@@ -1,12 +1,18 @@
 import { useGLTF } from '@react-three/drei';
 import { useRef } from 'react';
+import { useFrame } from '@react-three/fiber';
 
-export default function Ornament(props) {
-  const { nodes, materials } = useGLTF('/scene.gltf');
+export function Ornament(props) {
+  const { nodes, materials } = useGLTF('/ornament/scene.gltf');
+  const ornamentRef = useRef();
+  useFrame(({ clock }) => {
+    ornamentRef.current.position.y = Math.sin(clock.elapsedTime) / 10;
+  });
   return (
     <group
       {...props}
       dispose={null}
+      ref={ornamentRef}
     >
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <mesh
@@ -37,10 +43,7 @@ export default function Ornament(props) {
           geometry={nodes.Object_8.geometry}
           material={materials.blinn1SG}
         />
-        <mesh
-          geometry={nodes.Object_9.geometry}
-          material={materials.gold}
-        />
+
         <mesh
           geometry={nodes.Object_10.geometry}
           material={materials.blinn4SG}
@@ -49,5 +52,3 @@ export default function Ornament(props) {
     </group>
   );
 }
-
-useGLTF.preload('/scene.gltf');

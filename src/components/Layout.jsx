@@ -1,10 +1,7 @@
-import styled from 'styled-components';
-
-const LayoutContainer = styled.main`
-  width: 100vw;
-  height: 100vh;
-`;
-
 export default function Layout({ children }) {
-  return <LayoutContainer>{children}</LayoutContainer>;
+  return (
+    <main className="w-screen h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 font-Mona-Sans">
+      {children}
+    </main>
+  );
 }
