@@ -1,5 +1,6 @@
 import { Canvas } from '@react-three/fiber';
 import { lazy, Suspense } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Ornament = lazy(() =>
   import('../Model').then((module) => {
@@ -8,13 +9,20 @@ const Ornament = lazy(() =>
 );
 
 export default function HomeModel() {
+  const nav = useNavigate();
   return (
     <>
-      <h1 className="absolute w-full text-center top-1/4 font-bold text-5xl animate-wiggle">MAKING CHRISTMAS TREE</h1>
+      <div className="absolute w-full flex justify-center text-center top-1/4 font-bold text-5xl ">
+        <h1 className="animate-wiggle w-max text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-purple-500 to-blue-500">
+          MAKING CHRISTMAS TREE
+        </h1>
+      </div>
+
       <div className="absolute flex flex-col top-3/4 w-full text-xl justify-center items-center z-10">
         <button
           type="button"
           className="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 w-max"
+          onClick={() => nav('./example')}
         >
           EXAMPLE
         </button>
@@ -69,6 +77,7 @@ export default function HomeModel() {
           className="w-full h-full"
         >
           <ambientLight />
+          <directionalLight position={[0, 3, 0]} />
           <Ornament
             scale={[0.05, 0.05, 0.05]}
             position={[1, 0, 0]}

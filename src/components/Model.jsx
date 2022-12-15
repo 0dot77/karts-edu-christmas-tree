@@ -52,3 +52,53 @@ export function Ornament(props) {
     </group>
   );
 }
+
+export function Tree(props) {
+  const treeRef = useRef();
+  const { nodes, materials } = useGLTF('/tree/scene.gltf');
+
+  useFrame(() => {
+    treeRef.current.rotation.z += Math.PI * 0.001;
+  });
+
+  return (
+    <group
+      {...props}
+      dispose={null}
+    >
+      <group
+        rotation={[-Math.PI / 2, 0, 0]}
+        ref={treeRef}
+      >
+        <mesh
+          geometry={nodes.Object_2.geometry}
+          material={materials.model_Material_u1_v1}
+        />
+        <mesh
+          geometry={nodes.Object_3.geometry}
+          material={materials.model_Material_u1_v1}
+        />
+        <mesh
+          geometry={nodes.Object_4.geometry}
+          material={materials.model_Material_u1_v1}
+        />
+        <mesh
+          geometry={nodes.Object_5.geometry}
+          material={materials.model_Material_u1_v1}
+        />
+        <mesh
+          geometry={nodes.Object_6.geometry}
+          material={materials.model_Material_u1_v1}
+        />
+        <mesh
+          geometry={nodes.Object_7.geometry}
+          material={materials.model_Material_u1_v1}
+        />
+        <mesh
+          geometry={nodes.Object_8.geometry}
+          material={materials.model_Material_u1_v1}
+        />
+      </group>
+    </group>
+  );
+}
