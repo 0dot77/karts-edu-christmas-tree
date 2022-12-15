@@ -10,7 +10,7 @@ const Ornament = lazy(() =>
 export default function HomeModel() {
   return (
     <>
-      <h1 className="absolute w-full text-center top-1/4 font-bold text-5xl">MAKING CHRISTMAS TREE</h1>
+      <h1 className="absolute w-full text-center top-1/4 font-bold text-5xl animate-wiggle">MAKING CHRISTMAS TREE</h1>
       <div className="absolute flex flex-col top-3/4 w-full text-xl justify-center items-center z-10">
         <button
           type="button"
