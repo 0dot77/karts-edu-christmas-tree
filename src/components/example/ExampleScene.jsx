@@ -1,3 +1,4 @@
+import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Suspense, lazy } from 'react';
 
@@ -13,6 +14,14 @@ const SpaceDust = lazy(() =>
   import('../Effect').then((module) => {
     return {
       default: module.SpaceDust,
+    };
+  })
+);
+
+const MonsterMeshModel = lazy(() =>
+  import('../Model').then((module) => {
+    return {
+      default: module.MonsterMeshModel,
     };
   })
 );
@@ -53,10 +62,36 @@ export default function ExampleScene() {
         }}
       >
         <ambientLight />
+        <OrbitControls />
         <SpaceDust count={500} />
         <Tree
-          scale={[0.5, 0.5, 0.5]}
-          position={[0, -7, -8]}
+          scale={[0.1, 0.1, 0.1]}
+          position={[0, -2, 0]}
+        />
+        <MonsterMeshModel
+          modelPath={'example/cherry.glb'}
+          scale={[0.25, 0.25, 0.25]}
+          position={[-0.5, 0, 0]}
+        />
+        <MonsterMeshModel
+          modelPath={'example/cookie.glb'}
+          scale={[0.15, 0.15, 0.15]}
+          position={[0.5, 0.5, 0]}
+        />
+        <MonsterMeshModel
+          modelPath={'example/kiwi.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[0.65, -1, 1]}
+        />
+        <MonsterMeshModel
+          modelPath={'example/rudolph.glb'}
+          scale={[0.2, 0.2, 0.2]}
+          position={[-1, -1, 1]}
+        />
+        <MonsterMeshModel
+          modelPath={'example/star.glb'}
+          scale={[0.15, 0.15, 0.15]}
+          position={[-0.1, 1, -0.1]}
         />
       </Canvas>
     </Suspense>

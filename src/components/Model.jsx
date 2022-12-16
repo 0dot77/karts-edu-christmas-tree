@@ -1,6 +1,8 @@
 import { useGLTF } from '@react-three/drei';
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
+import { useLoader } from '@react-three/fiber';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 export function Ornament(props) {
   const { nodes, materials } = useGLTF('/ornament/scene.gltf');
@@ -100,5 +102,19 @@ export function Tree(props) {
         />
       </group>
     </group>
+  );
+}
+
+export function MonsterMeshModel(props) {
+  const modelRef = useRef();
+  const glb = useLoader(GLTFLoader, props.modelPath);
+
+  return (
+    <primitive
+      ref={modelRef}
+      object={glb.scene}
+      position={props.position}
+      scale={props.scale}
+    ></primitive>
   );
 }

@@ -7,20 +7,24 @@
     font-family: Mona-Sans;
     font-weight: 300;
     src: url(/fonts/mona-sans/Mona-Sans-Light.woff2) format('woff2');
+    font-display: swap;
   }
   @font-face {
     font-family: Mona-Sans;
     font-weight: 400;
     src: url(/fonts/mona-sans/Mona-Sans-Regular.woff2) format('woff2');
+    font-display: swap;
   }
   @font-face {
     font-family: Mona-Sans;
     font-weight: 500;
     src: url(/fonts/mona-sans/Mona-Sans-Medium.woff2) format('woff2');
+    font-display: swap;
   }
   @font-face {
     font-family: Mona-Sans;
     font-weight: 700;
     src: url(/fonts/mona-sans/Mona-Sans-Bold.woff2) format('woff2');
+    font-display: swap;
   }
 }
