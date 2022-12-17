@@ -68,6 +68,37 @@ export default function TeamTwoScene() {
           scale={[0.1, 0.1, 0.1]}
           position={[0, -2, 0]}
         />
+        <MonsterMeshModel
+          modelPath={'team2/김미경_구름.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[1, -1, 1]}
+        />
+        <MonsterMeshModel
+          modelPath={'team2/김미경_눈사람.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[0.5, 0.1, 0]}
+        />
+        <MonsterMeshModel
+          modelPath={'team2/이태양_붕어빵.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[-0.5, 0.25, 0]}
+        />
+        <MonsterMeshModel
+          modelPath={'team2/이태양_태양.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[1, -1, 0.15]}
+        />
+        <MonsterMeshModel
+          modelPath={'team2/정은지_곰돌이.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[-0.6, -0.5, 0]}
+        />
+        <MonsterMeshModel
+          modelPath={'team2/정은지_쿠키.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[-0.5, -1, 1]}
+          rotation={[0, 0, Math.PI / 2]}
+        />
       </Canvas>
     </Suspense>
   );

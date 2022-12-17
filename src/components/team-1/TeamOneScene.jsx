@@ -68,6 +68,37 @@ export default function TeamOneScene() {
           scale={[0.1, 0.1, 0.1]}
           position={[0, -2, 0]}
         />
+        <MonsterMeshModel
+          modelPath={'team1/미니루돌프.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[0, -1, 1]}
+          rotation={[0, 0, Math.PI / 2 + 10]}
+        />
+        <MonsterMeshModel
+          modelPath={'team1/미니산타.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[0.5, 0.5, 0]}
+        />
+        <MonsterMeshModel
+          modelPath={'team1/스노우볼.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[1, 0.5, 0.5]}
+        />
+        <MonsterMeshModel
+          modelPath={'team1/싼타.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[0.5, -0.5, 0.5]}
+        />
+        <MonsterMeshModel
+          modelPath={'team1/진저맨.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[-1, -0.5, 0]}
+        />
+        <MonsterMeshModel
+          modelPath={'team1/징글벨.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[-0.5, 0.45, 0.5]}
+        />
       </Canvas>
     </Suspense>
   );

@@ -118,6 +118,7 @@ export function MonsterMeshModel(props) {
       object={glb.scene}
       position={props.position}
       scale={props.scale}
+      rotation={props.rotation}
     ></primitive>
   );
 }

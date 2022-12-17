@@ -68,6 +68,56 @@ export default function TeamThreeScene() {
           scale={[0.1, 0.1, 0.1]}
           position={[0, -2, 0]}
         />
+        <MonsterMeshModel
+          modelPath={'team3/obj-1.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[1, -1, 0.15]}
+        />
+        <MonsterMeshModel
+          modelPath={'team3/obj-2.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[-1, -1, 0.15]}
+        />
+        <MonsterMeshModel
+          modelPath={'team3/obj-3.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[-0.25, 0.5, 0.15]}
+        />
+        <MonsterMeshModel
+          modelPath={'team3/obj-4.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[0.5, 0.25, 0.15]}
+        />
+        <MonsterMeshModel
+          modelPath={'team3/obj-5.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[-0.75, -0.25, 0.15]}
+        />
+        <MonsterMeshModel
+          modelPath={'team3/obj-6.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[0.55, -0.5, 0.15]}
+        />
+        <MonsterMeshModel
+          modelPath={'team3/obj-7.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[0.5, -1.25, 0.5]}
+        />
+        <MonsterMeshModel
+          modelPath={'team3/obj-9.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[-0.5, -1.25, 0.5]}
+        />
+        <MonsterMeshModel
+          modelPath={'team3/obj-10.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[1, 0.15, 1]}
+        />
+        <MonsterMeshModel
+          modelPath={'team3/obj-11.glb'}
+          scale={[0.1, 0.1, 0.1]}
+          position={[-0.6, -1.25, 1]}
+        />
       </Canvas>
     </Suspense>
   );
