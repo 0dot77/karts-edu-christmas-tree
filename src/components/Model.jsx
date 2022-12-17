@@ -108,6 +108,9 @@ export function Tree(props) {
 export function MonsterMeshModel(props) {
   const modelRef = useRef();
   const glb = useLoader(GLTFLoader, props.modelPath);
+  useFrame(({ clock }) => {
+    modelRef.current.position.y += Math.sin(clock.elapsedTime) / 1000;
+  });
 
   return (
     <primitive
